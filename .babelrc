@@ -1,0 +1,11 @@
+{
+  "presets": [["env", { "targets": { "node": true } }]],
+  "env": {
+    "commonjs": {
+      "presets": ["env"]
+    },
+    "umd": {
+      "presets": [["env", { "es2015": { "modules": false } }]]
+    }
+  }
+}

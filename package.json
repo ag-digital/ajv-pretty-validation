@@ -1,0 +1,104 @@
+{
+  "name": "@ag-digital/ajv-pretty-validation",
+  "version": "0.0.0",
+  "description": "Pretty output for 'ajv' errors.",
+  "license": "MIT",
+  "main": "commonjs/index.js",
+  "files": [
+    "*.js",
+    "*.md",
+    "umd",
+    "commonjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ag-digital/ajv-pretty-validation.git"
+  },
+  "homepage": "https://github.com/ag-digital/ajv-pretty-validation#readme",
+  "keywords": [
+    "ajv"
+  ],
+  "scripts": {
+    "build": "babel-node ./tools/scripts/build.js",
+    "check": "npm run test",
+    "clean": "rimraf ./commonjs && rimraf ./umd && rimraf ./coverage && rimraf ./umd",
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "prepush": "npm run lint && npm run test",
+    "prepublish": "npm run lint && npm run test && npm run build",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "ajv": "^5.2.2"
+  },
+  "devDependencies": {
+    "ajv": "5.2.3",
+    "app-root-dir": "1.0.2",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "21.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "5.0.5",
+    "eslint": "4.7.2",
+    "eslint-config-airbnb-base": "12.0.0",
+    "eslint-plugin-import": "2.7.0",
+    "gzip-size": "4.0.0",
+    "husky": "0.14.3",
+    "jest": "21.1.0",
+    "lint-staged": "4.2.3",
+    "lodash.compose": "2.4.1",
+    "pretty-bytes": "4.0.2",
+    "rimraf": "2.6.2",
+    "webpack": "3.6.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(commonjs|node_modules|tools|umd)/"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+      "array-callback-return": 0,
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "camelcase": 0,
+      "comma-dangle": [
+        2,
+        "never"
+      ],
+      "import/prefer-default-export": 0,
+      "import/no-extraneous-dependencies": 0,
+      "indent": 0,
+      "no-mixed-operators": 0,
+      "no-underscore-dangle": 0,
+      "no-confusing-arrow": 0,
+      "no-nested-ternary": 0,
+      "semi": [
+        2,
+        "never"
+      ]
+    }
+  },
+  "dependencies": {
+    "chalk": "^2.1.0"
+  }
+}

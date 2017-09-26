@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prettyValidation() prints the expected validation output 1`] = `
+"{
+  \\"name\\": \\"Sean\\"
+  \\"address\\": {
+    [31m\\"line1\\": 1[39m
+    [35m^ \\"line1\\" should be string[39m
+    \\"city\\": \\"london\\"
+  }
+  [31m\\"contactInfo\\": {[39m
+[31m    \\"email\\": \\"foo@bar.com\\"[39m
+[31m  }[39m
+  [35m^ \\"contactInfo\\" should have required property 'telephone'[39m
+  [31m\\"favouriteFruit\\": [\\"banana\\", \\"banana\\"][39m
+  [35m^ \\"favouriteFruit\\" should NOT have duplicate items (items ## 0 and 1 are identical)[39m
+  [31m\\"lovesJson\\": \\"true\\"[39m
+  [35m^ \\"lovesJson\\" should be boolean[39m
+}"
+`;
