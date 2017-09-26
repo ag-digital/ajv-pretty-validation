@@ -1,6 +1,6 @@
 {
   "name": "@ag-digital/ajv-pretty-validation",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pretty output for 'ajv' errors.",
   "license": "MIT",
   "main": "commonjs/index.js",
