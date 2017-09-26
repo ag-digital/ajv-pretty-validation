@@ -2,9 +2,6 @@
 
 Creates pretty output for [`ajv`](https://github.com/epoberezkin/ajv) errors.
 
-[![npm](https://img.shields.io/npm/v/@ag-digital/ajv-pretty-validation.svg?style=flat-square)](http://npm.im/@ag-digital/ajv-pretty-validation)
-[![MIT License](https://img.shields.io/npm/l/@ag-digital/ajv-pretty-validation.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-
 ## TOCs
 
   - [Introduction](#introduction)
@@ -23,7 +20,7 @@ npm i ajv @ag-digital/ajv-pretty-validation
 
 ## Usage
 
-```
+```javascript
 const ajvPrettyValidation = require('@ag-digital/ajv-pretty-validation');
 
 const isValid = ajv.validate('person', personData)
