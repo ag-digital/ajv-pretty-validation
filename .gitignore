@@ -11,3 +11,6 @@ npm-debug.log
 # Build output
 umd
 commonjs
+
+# IDEs
+.vscode
